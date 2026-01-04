@@ -1,5 +1,5 @@
 # Enter the name for assign to the azure_resource
-name = "azure-sample-001"
+name = "sonaqubw"
 
 # Enter the name for the azure_resource
 location = "centralindia"
@@ -11,4 +11,4 @@ enable_pip = "true"
 vm_password = "rootadmin@123"
 
 # Enter the subscription id
-subscription_id = "1863e903-68c1-4e05-a0cb-40e0bcb9a2df"
+subscription_id = "bd7b142b-030a-46e3-8a31-579ffb9d2046"

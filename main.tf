@@ -65,11 +65,13 @@ resource "azurerm_linux_virtual_machine" "linux-vm" {
   name                            = "vm-${var.name}"
   location                        = azurerm_resource_group.rg.location
   resource_group_name             = azurerm_resource_group.rg.name
-  size                            = "Standard_D2s_v3"
-  admin_username                  = "testadmin"
+  size                            = "Standard_B2s"
+  admin_username                  = "rootadmin"
   admin_password                  = var.vm_password
   disable_password_authentication = "false"
   network_interface_ids           = [azurerm_network_interface.nic.id]
+
+  custom_data = base64decode(file("cloud-init-docker.yml"))
 
   os_disk {
     caching              = "ReadWrite"
@@ -83,5 +85,3 @@ resource "azurerm_linux_virtual_machine" "linux-vm" {
     version   = "latest"
   }
 }
-
-
