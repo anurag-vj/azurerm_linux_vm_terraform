@@ -11,7 +11,7 @@ variable "enable_pip" {
 }
 
 variable "vm_password" {
-  type      = string
+  type = string
 }
 
 variable "subscription_id" {
