@@ -1,5 +1,5 @@
 # Enter the name for assign to the azure_resource
-name = "sonaqubw"
+name = "sonarqube"
 
 # Enter the name for the azure_resource
 location = "centralindia"

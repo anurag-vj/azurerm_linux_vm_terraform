@@ -17,7 +17,7 @@ runcmd:
   - apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   - systemctl enable docker
   - systemctl start docker
-  - usermod -aG docker testadmin
+  - usermod -aG docker rootadmin
 
-  # Run a container (example: NGINX)
+  # Run a Sonarqube as a container
   - docker run -d --name sonarqube -p 9000:9000 sonarqube:community

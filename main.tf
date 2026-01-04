@@ -68,10 +68,10 @@ resource "azurerm_linux_virtual_machine" "linux-vm" {
   size                            = "Standard_B2s"
   admin_username                  = "rootadmin"
   admin_password                  = var.vm_password
-  disable_password_authentication = "false"
+  disable_password_authentication = false
   network_interface_ids           = [azurerm_network_interface.nic.id]
 
-  custom_data = base64decode(file("cloud-init-docker.yml"))
+  custom_data = base64encode(file("sonarqube_docker.yaml"))
 
   os_disk {
     caching              = "ReadWrite"
